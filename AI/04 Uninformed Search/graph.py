@@ -29,8 +29,8 @@ class DistanceGraph:
     def connect(self, name1, name2, value):
         node1 = self.nodes[name1]
         node2 = self.nodes[name2]
-        node1.connect[name2] = node2, value
-        node2.connect[name1] = node1, value
+        node1.connect[name2] = (value, node2) 
+        node2.connect[name1] = (value, node1) 
     
     def __str__(self):
         toString = ""
